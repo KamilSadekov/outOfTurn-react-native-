@@ -1,0 +1,81 @@
+@import "./variables";
+
+body {
+	font: 400 16px/1.4 $font__name;
+}
+
+/* Position */
+[class*="pos-abs"] {
+	position: absolute;
+}
+
+.pos {
+	position: relative;
+	z-index: 1;
+
+	&-abs {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&-abs-y {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	&-abs-x {
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
+/* Image */
+[class*="image-"] {
+	width: 100%;
+	height: 100%;
+}
+
+.image {
+	&-cover {
+		object-fit: cover;
+	}
+
+	&-contain {
+		object-fit: contain;
+	}
+
+	&-circle {
+		border-radius: 100%;
+	}
+}
+
+/* Scroll */
+[class*="scroll-"] {
+	-webkit-overflow-scrolling: touch;
+}
+
+.scroll {
+	&-y {
+		overflow: hidden auto;
+	}
+
+	&-x {
+		overflow: auto hidden;
+	}
+
+	&-disabled {
+		overflow: hidden;
+	}
+}
+
+/* Cursor */
+.cursor {
+	&-pointer {
+		cursor: pointer !important;
+	}
+
+	&-default {
+		cursor: default !important;
+	}
+}

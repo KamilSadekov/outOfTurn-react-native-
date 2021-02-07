@@ -1,0 +1,77 @@
+@import "./src/assets/css/inc/global/_variables";
+
+.header {
+  padding: 15px 45px 15px 30px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.iconWrap {
+  height: 32px;
+}
+
+.arrowWrap {
+  height: 20px;
+}
+
+.arrow {
+  transition: all 0.3s;
+}
+
+.content {
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.innerWrap {
+  line-height: 1.5;
+  padding: 20px 40px 30px;
+}
+
+.opened {
+  .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.content {
+  overflow-y: hidden;
+}
+
+.innerWrap {
+  line-height: 1.5;
+  padding: 0 40px 30px;
+  white-space: normal;
+}
+
+.opened {
+  .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: $mediaMd) {
+  .header {
+    padding: 15px 15px 17px;
+    font-size: 16px;
+  }
+
+  .arrowWrap {
+    height: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .innerWrap {
+    padding: 0 20px 15px;
+  }
+}
+//
+//@media (max-width: $mediaSm) {
+//	.header {
+//		padding: 10px;
+//	}
+//}
